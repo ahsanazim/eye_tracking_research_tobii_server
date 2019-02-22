@@ -19,7 +19,7 @@ async def hello(websocket, path):
 
     # data file details
     data_fpath = './data.txt'
-    data_fh = open(data_fpath,'w')
+    data_fh = open(data_fpath,'a')
     data_fh.write('writing data on {}\n'.format(time.asctime(time.localtime(time.time()))))
     ###
 

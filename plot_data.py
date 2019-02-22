@@ -13,11 +13,15 @@ if __name__ == "__main__":
             arr = line.split(" ")
             if arr[0] == "*":
                 X.append(float(arr[1]))
-                Y.append(float(arr[1]))
+                Y.append(float(arr[2]))
 
     # transform data
     Y = list(X)                 # y-axis will actually have X-coords
     X = list(range(len(X)))     # x-axis will have a proxy for time
+
+    # if you want to plot Y
+    # Y = Y                 # y-axis will actually have X-coords
+    # X = list(range(len(Y)))     # x-axis will have a proxy for time
 
     # plot
     plt.plot(X,Y)
