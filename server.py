@@ -42,6 +42,9 @@ async def hello(websocket, path):
             # print(x, y)
             # print("SENDING {}".format(data_str))
             await websocket.send(data_str)
+            line_time_info = await websocket.recv()
+            print("{}\n".format(line_time_info))        # write to data file
+            data_fh.write(line_time_info)
 
     # greeting = f"Hello {name}!"
 
